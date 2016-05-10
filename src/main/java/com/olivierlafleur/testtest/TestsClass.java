@@ -5,7 +5,7 @@ import static com.olivierlafleur.testtest.MyTestFramework.checkTrue;
 
 public class TestsClass {
     //This test should fail because it raises an exception
-    public void divisionParZeroTest() {
+    public void divisionByZeroTest() {
         int var1 = 1;
         int var2 = 2;
 
@@ -15,7 +15,7 @@ public class TestsClass {
     }
 
     //This test should pass
-    public void unAutreTest() {
+    public void anotherTest() {
         int var1 = 1;
         int var2 = 2;
 
@@ -23,7 +23,7 @@ public class TestsClass {
     }
 
     //This test should fail
-    public void unAutreTest2() {
+    public void anotherTest2() {
         int var1 = 1;
         int var2 = 2;
 
@@ -31,12 +31,12 @@ public class TestsClass {
     }
 
     //This test should pass
-    public void unTestEgalite() {
+    public void equalityTest() {
         verifieEgal(2, 2);
     }
 
     //This test should fail
-    public void unTestInEgalite() {
+    public void inequalityTest() {
         verifieEgal(1, 2);
     }
 }
