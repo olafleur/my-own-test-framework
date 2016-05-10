@@ -49,7 +49,7 @@ public class MyTestFramework {
         }
     }
 
-    public static void verifieEgal(int expected, int result) {
+    public static void checkEqual(int expected, int result) {
         if(expected == result) {
             success();
         } else {

@@ -1,6 +1,6 @@
 package com.olivierlafleur.testtest;
 
-import static com.olivierlafleur.testtest.MyTestFramework.verifieEgal;
+import static com.olivierlafleur.testtest.MyTestFramework.checkEqual;
 import static com.olivierlafleur.testtest.MyTestFramework.checkTrue;
 
 public class TestsClass {
@@ -32,11 +32,11 @@ public class TestsClass {
 
     //This test should pass
     public void equalityTest() {
-        verifieEgal(2, 2);
+        checkEqual(2, 2);
     }
 
     //This test should fail
     public void inequalityTest() {
-        verifieEgal(1, 2);
+        checkEqual(1, 2);
     }
 }
