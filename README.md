@@ -1,5 +1,5 @@
 # my-own-test-framework
 
-Vous devez ajouter un argument au programme (la classe qui contient les tests) pour que ça fonctionne. 
+You have to add an argument to the program (the class that contains the tests) to make it work.
 
-Exemple : `com.olivierlafleur.testtest.ClasseDeTests`
+Example : `com.olivierlafleur.testtest.TestsClass`
