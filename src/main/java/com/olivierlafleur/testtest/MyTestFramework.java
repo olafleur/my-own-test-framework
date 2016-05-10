@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MonFrameworkDeTest {
+public class MyTestFramework {
     private static List<String> errors = new ArrayList<String>();
 
     public static void main(String[] args) throws ClassNotFoundException,
@@ -28,38 +28,38 @@ public class MonFrameworkDeTest {
         System.out.println("-----");
 
         if(errors.size() > 0) {
-            System.err.println(errors.size() + " test(s) en erreur sur " + m.length + " tests exécutés\n");
+            System.err.println(errors.size() + " test(s) in error on " + m.length + " tests run\n");
 
             for(String failingTest : errors) {
                 System.err.println(failingTest);
             }
         } else {
-            System.out.println("Tous les tests passent.");
+            System.out.println("All the tests pass.");
         }
 
     }
 
-    public static void verifieVrai(boolean condition) {
+    public static void checkTrue(boolean condition) {
         if(condition) {
-            reussite();
+            success();
         } else {
-            String nomMethode = Thread.currentThread().getStackTrace()[2].getMethodName();
+            String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
 
-            fail(nomMethode + " : Condition non vérifiée");
+            fail(methodName + " : Condition not verified");
         }
     }
 
-    public static void verifieEgal(int attendu, int resultat) {
-        if(attendu == resultat) {
-            reussite();
+    public static void verifieEgal(int expected, int result) {
+        if(expected == result) {
+            success();
         } else {
-            String nomMethode = Thread.currentThread().getStackTrace()[2].getMethodName();
+            String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
 
-            fail(nomMethode + " : Attendu " + attendu + " / Obtenu " + resultat);
+            fail(methodName + " : Expected " + expected + " / Obtained " + result);
         }
     }
 
-    private static void reussite() {
+    private static void success() {
         System.out.print(".");
     }
 
@@ -69,12 +69,12 @@ public class MonFrameworkDeTest {
     }
 
     private static String printArray(StackTraceElement[] stackTraceElement) {
-        String resultat = "";
+        String result = "";
 
         for(StackTraceElement line : stackTraceElement) {
-            resultat += line + "\n";
+            result += line + "\n";
         }
 
-        return resultat;
+        return result;
     }
 }
